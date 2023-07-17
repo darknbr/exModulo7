@@ -26,16 +26,15 @@ public class ContaCorrente extends Conta{
     public double getSaldo(){
         return this.chequeEspecial + this.saldo;
     }
-    /*Na conta Corrente, crie um limite de saque baseado no limite de cheque especial de cada objeto.
-     Ou seja, por exemplo, se a conta tem um saldo de R$100,00 e um limite de cheque especial de R$500,00,
-    o cliente tem disponível para saque R$600,00. Além deste valor ele não poderá sacar.  */
-    public double getSacar(){
-        if (this.sacar > getSaldo()){
-                return -1.413; // esse valor e apenas para n retornar 0 e da incompatibilidade
+
+    public double saque(double sacar){
+        if (sacar > (getSaldo()) || sacar <= 0){
+                return 0;
                 }
             else {
-                return getSaldo() - this.sacar;
-        }
+                return getSaldo() - sacar;
+        }   
+        
     }
 
     public double getDesposito(){

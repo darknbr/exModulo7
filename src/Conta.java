@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public abstract class Conta{
     private int numero;
     private int agencia;
@@ -13,6 +11,9 @@ public abstract class Conta{
         this.agencia = agencia;
         this.banco = banco;
         this.saldo = saldo;
+    }
+    public Conta(double sacar){
+        this.sacar = sacar;
     }
 
     @Override
@@ -54,8 +55,6 @@ public abstract class Conta{
     public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
-
-    public abstract double getSacar();
 
     public void setSacar(double sacar) {
         this.sacar = sacar;

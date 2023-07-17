@@ -10,3 +10,4 @@ Na conta Poupança você pode criar uma regra bem simples onde o valor do saldo 
 
 O objetivo é apenas treinar a herança e seus mecanismos e não criar uma implementação complexa de como é na vida real.
 
+getsacar --> criar o metodo sacar recebe valor 

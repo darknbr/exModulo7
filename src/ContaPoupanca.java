@@ -39,15 +39,15 @@ public class ContaPoupanca extends Conta{
             return this.saldo;
         }
     }
-    /*Na conta Poupança você pode criar uma regra bem simples onde o valor do saldo 
-    pode variar dependendo do dia de aniversário da conta e da taxa de juros. */
-    public double getSacar(){
-        if (this.sacar > getSaldo()){
-                return -1.413;// esse valor e apenas para n retornar 0 e da incompatibilidade
+    
+    public double saque(double sacar){
+        if (sacar > (getSaldo()) || sacar <= 0){
+                return 0;
                 }
-            else{
-                return getSaldo() - this.sacar;
-        }
+            else {
+                return getSaldo() - sacar;
+        }   
+        
     }
 
     public double getDesposito(){

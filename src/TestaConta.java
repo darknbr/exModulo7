@@ -78,17 +78,16 @@ public class TestaConta {
                             System.out.println("Saldo da conta corrente: " + cc1.getSaldo());
                             System.out.println("Quanto deseja sacar: ");
                             double saque = sc.nextInt();
-                            cc1.setSacar(saque);
+                            double valorAtualizado = cc1.saque(saque);
                            
-                            if(cc1.getSacar() == -1.413){
+                            if(cc1.saque(saque) == 0){
                                 System.out.println("Valor indisponivel para saque: " + saque);
                                 System.out.println("Valor maximo permitido para saque: " + cc1.getSaldo());
                                 System.out.println("Tente novamente !!!");
                                 option = 0;                                                          
                             } else {
                                 System.out.println("Saque efetuado com sucesso.");
-                                System.out.println("Valor atualizado saldo: " + cc1.getSacar());
-                                cc1.setSaldo(cc1.getSacar());
+                                System.out.println("Valor atualizado saldo: " + valorAtualizado);
                                 option = 0;                               
                             }
 
@@ -102,17 +101,16 @@ public class TestaConta {
                             System.out.println("Saldo da conta poupança: " + pp1.getSaldo());
                             System.out.println("Quanto deseja sacar: ");
                             double saque = sc.nextInt();
-                            pp1.setSacar(saque);
+                            double valorAtualizado = pp1.saque(saque);
                            
-                            if(pp1.getSacar() == -1.413){
+                            if(pp1.saque(saque) == 0){
                                 System.out.println("Valor indisponivel para saque: " + saque);
                                 System.out.println("Valor maximo permitido para saque: " + pp1.getSaldo());
                                 System.out.println("Tente novamente !!!");
                                 option = 0;                                                          
                             } else {
                                 System.out.println("Saque efetuado com sucesso.");
-                                System.out.println("Valor atualizado saldo: " + pp1.getSacar());
-                                pp1.setSaldo(pp1.getSacar()); 
+                                System.out.println("Valor atualizado saldo: " + valorAtualizado);                            
                                 option = 0;                               
                             }
                             break;
@@ -130,17 +128,16 @@ public class TestaConta {
                                 System.out.println("Saldo da conta salário: " + cs1.getSaldo());
                                 System.out.println("Quanto deseja sacar: ");
                                 double saque = sc.nextInt();
-                                cs1.setSacar(saque);
+                                double valorAtualizado = cs1.saque(saque);
                             
-                                if(cs1.getSacar() == -1.413){
+                                if(cs1.saque(saque) == 0){
                                     System.out.println("Valor indisponivel para saque: " + saque);
                                     System.out.println("Valor maximo permitido para saque: " + cs1.getSaldo());
                                     System.out.println("Tente novamente !!!");
                                     option = 0;                                                          
                                 } else {
                                     System.out.println("Saque efetuado com sucesso.");
-                                    System.out.println("Valor atualizado saldo: " + cs1.getSacar());
-                                    cs1.setSaldo(cs1.getSacar()); 
+                                    System.out.println("Valor atualizado saldo: " + valorAtualizado);                                    
                                     saquesMes ++;
                                     option = 0;                               
                                 }
@@ -236,5 +233,4 @@ public class TestaConta {
            
 
 }
-
 
