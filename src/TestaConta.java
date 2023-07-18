@@ -108,7 +108,7 @@ public class TestaConta {
                                 option = 0;                                                          
                             } else {
                                 System.out.println("Saque efetuado com sucesso.");
-                                System.out.println("Valor atualizado saldo: " + pp1.getSaldo());                            
+                                System.out.println("Valor atualizado saldo: " + pp1.saldo);                            
                                 option = 0;                               
                             }
                             break;
