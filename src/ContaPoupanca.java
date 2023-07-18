@@ -42,7 +42,7 @@ public class ContaPoupanca extends Conta{
     
     public boolean saque(double sacar){
 
-        double disponivelParaSaque = this.saldo + (this.taxaDeJuros * this.saldo);
+        double disponivelParaSaque = getSaldo();
         if (sacar > disponivelParaSaque || sacar <= 0){
                 return false;
                 }
