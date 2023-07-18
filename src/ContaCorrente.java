@@ -27,12 +27,14 @@ public class ContaCorrente extends Conta{
         return this.saldo + chequeEspecial;
     }
 
-    public double saque(double sacar){
-        if (sacar > (getSaldo()) || sacar <= 0){
-                return 0;
+    public boolean saque(double sacar){
+        double disponivelParaSaque = this.chequeEspecial + this.saldo;
+        if (sacar > disponivelParaSaque || sacar <= 0){
+                return false;
                 }
             else {
-                return this.saldo = getSaldo() - sacar;
+                this.saldo -= sacar;
+                return true;
         }   
         
     }

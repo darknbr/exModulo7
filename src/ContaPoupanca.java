@@ -34,18 +34,21 @@ public class ContaPoupanca extends Conta{
 
     public double getSaldo(){
         if(diaAniversario >= 20){
-            return this.saldo + this.taxaDeJuros * this.saldo;
+            return this.saldo + (this.taxaDeJuros * this.saldo);
         } else {
             return this.saldo;
         }
     }
     
-    public double saque(double sacar){
-        if (sacar > (getSaldo()) || sacar <= 0){
-                return 0;
+    public boolean saque(double sacar){
+
+        double disponivelParaSaque = this.saldo + (this.taxaDeJuros * this.saldo);
+        if (sacar > disponivelParaSaque || sacar <= 0){
+                return false;
                 }
             else {
-                return this.saldo = getSaldo() - sacar;
+                this.saldo = disponivelParaSaque - sacar;
+                return true;
         }   
         
     }
