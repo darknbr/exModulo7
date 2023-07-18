@@ -38,7 +38,7 @@ public class TestaConta {
 
                     switch (option){
                         case 1:{
-                            System.out.println("Saldo conta corrente: " + cc1.getSaldo());
+                            System.out.println("Saldo conta corrente: " +cc1.saldo);
                             break;
                         }
                         case 2:{
@@ -46,11 +46,11 @@ public class TestaConta {
                             int diaAniversario = sc.nextInt();
                             pp1.setDiaAniversario(diaAniversario);
 
-                            System.out.println("Saldo conta poupança: " + pp1.getSaldo());
+                            System.out.println("Saldo conta poupança: " + pp1.saldo);
                             break;
                         }
                         case 3:{
-                            System.out.println("Saldo da conta salário: "+ cs1.getSaldo());
+                            System.out.println("Saldo da conta salário: "+ cs1.saldo);
                             break;
                         }
                         case 0:{

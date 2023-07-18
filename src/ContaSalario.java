@@ -23,7 +23,7 @@ public class ContaSalario extends Conta{
                 return 0;
                 }
             else {
-                return getSaldo() - sacar;
+                return this.saldo = getSaldo() - sacar;
         }   
         
     }

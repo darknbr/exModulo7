@@ -4,7 +4,7 @@ public class ContaCorrente extends Conta{
 
     public ContaCorrente(int numero, int agencia, String banco, double saldo, double chequeEspecial) {
         super(numero, agencia, banco, saldo);
-        this.chequeEspecial = chequeEspecial;    
+        this.chequeEspecial = chequeEspecial;   
     }
 
 
@@ -24,7 +24,7 @@ public class ContaCorrente extends Conta{
     }
     
     public double getSaldo(){
-        return this.chequeEspecial + this.saldo;
+        return this.saldo + chequeEspecial;
     }
 
     public double saque(double sacar){
@@ -32,7 +32,7 @@ public class ContaCorrente extends Conta{
                 return 0;
                 }
             else {
-                return getSaldo() - sacar;
+                return this.saldo = getSaldo() - sacar;
         }   
         
     }
